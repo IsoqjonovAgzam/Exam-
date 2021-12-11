@@ -1,0 +1,71 @@
+// ********************
+// Google Fonts
+// ********************
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@400;700&display=swap');
+
+// ********************
+// Custom Properties
+// ********************
+:root{
+    // Colors - Primary
+    --color-dark-pink: #ba4270;
+    --color-link-water-white: #fbfcfe;
+    // Colors - Secondary
+    --color-sanjuan-blue: #36536b;
+    --color-mirage-blue: #1b262f;
+    --color-charm-pink: #da6d97;
+    --color-light-sanjuan-blue: #6c8294;
+    --color-bg: #EDF3F8;
+    // Fonts
+    --ff-primary: 'DM Serif Display', sans-serif;
+    --ff-secondary: 'Public Sans', sans-serif;
+
+    --fs-h1-l: 2.133rem;
+    --fs-h1-s: 2.133rem;
+    --fs-h2: 2.133rem;
+    --fs-h3-l: 1.6rem;
+    --fs-h3-s: 1.2rem;
+    --fs-h4: 1.6rem;
+    --fs-body: 1rem;
+    --fs-big: 3.733rem;
+    --fs-small: .733rem;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    // Z Index
+    --z-back: -1;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    // Box Shadow
+    --bxs-btn: 10px 10px 25px -10px rgba(0,0,0,.25);
+}
+
+// Tablet
+@include breakpoint-up(medium){
+    :root{
+        --fs-h1-l: 3.2rem;
+        --fs-h1-s: 3.2rem;
+        --fs-h2: 3.2rem;
+        --fs-h3-l: 1.6rem;
+        --fs-h3-s: 1.2rem;
+        --fs-h4: 1.6rem;
+        --fs-body: 1rem;
+    }
+}
+
+// Desktop
+@include breakpoint-up(large){
+    :root{
+        --fs-h1-l: 4.8rem;
+        --fs-h1-s: 3.733rem;
+        --fs-h2: 3.2rem;
+        --fs-h3-l: 2.133rem;
+        --fs-h3-s: 1.2rem;
+        --fs-h4: 1.6rem;
+        --fs-body: 1rem;
+    }
+}
+

@@ -1,0 +1,224 @@
+// ********************
+// Typography
+// ********************
+
+// Body
+body{
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-bold);
+    line-height: 1.86rem;
+    color: var(--color-light-sanjuan-blue);
+}
+
+// Headings
+
+.heading{
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-reg);
+    color: var(--color-sanjuan-blue);
+
+    &--1-large{
+        font-size: var(--fs-h1-l);
+        line-height: 2.4rem;
+
+        @include breakpoint-up(medium){
+            line-height: 3.733rem;
+        }
+
+        @include breakpoint-up(large){
+            line-height: 4.8rem;
+        }
+    }
+
+    &--1-small{
+        font-size: var(--fs-h1-s);
+        line-height: 2.4rem;
+
+        @include breakpoint-up(medium){
+            line-height: 3.733rem;
+        }
+    }
+
+    &--2{
+        font-size: var(--fs-h2);
+        line-height: 2.4rem;
+
+        @include breakpoint-up(medium){
+            line-height: 3.733rem;
+        }
+    }
+
+    &--3{
+        &-large{
+            font-size: var(--fs-h3-l);
+            line-height: 2.667rem;
+            
+            @include breakpoint-up(medium){
+                line-height: 3.733rem;
+            }
+        }
+
+        &-small{
+            font-family: var(--ff-secondary);
+            font-size: var(--fs-h3-s);
+            line-height: 1.667rem;
+        }
+    }
+
+    &--4{
+        font-size: var(--fs-h4);
+        line-height: 2.133rem;
+    }
+}
+
+// Button
+.btn{
+    font-weight: var(--fw-bold);
+}
+
+// Typography: Forms
+
+.form{
+    input,
+    textarea{
+        line-height: 1.667rem;
+        &::placeholder{
+            opacity: .5;
+            font-weight: var(--fw-bold);
+            font-family: var(--ff-secondary);
+            color: var(--color-sanjuan-blue);
+        }
+    }
+
+    small{
+        color: red;
+        opacity: .5;
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-small);
+    }
+}
+
+// Typography: Navigation
+
+.nav{
+    &__item{
+        font-weight: var(--fw-bold);
+
+        @include breakpoint-down(small){
+            font-size: 1.33rem;
+        }
+    }
+}
+
+// Typography: Header
+.header{
+    .nav{
+        &__item{
+
+            @include breakpoint-down(small){
+                color: var(--color-link-water-white);
+            }
+
+            color: var(--color-sanjuan-blue);
+            opacity: .7;
+
+            &:hover{
+                opacity: initial;
+            }
+        }
+    }
+}
+
+// Typography: Footer
+.footer{
+    .nav{
+        &__item{
+            color: var(--color-link-water-white);
+            opacity: .7;
+
+            &:hover{
+                opacity: initial;
+            }
+        }
+    }
+}
+
+// Typography: Home
+
+.hero__text-container{
+    p{
+        font-weight: var(--fw-reg);
+    }
+    a {
+        font-weight: var(--fw-bold);
+    }
+}
+
+// Typography: Home - Partners
+
+.partners{
+    color: var(--color-link-water-white);
+
+    .paragraph{
+        opacity: .7;
+    }
+}
+
+// Typography: Pricing
+
+.tier{
+    &__item{
+        .heading{
+            color: var(--color-dark-pink);
+        }
+    }
+    &__feature{
+        &--included{
+            color: var(--color-sanjuan-blue);
+        }
+
+        &--not-included{
+            opacity: .5;
+        }
+    }
+
+    &__pricing{
+        span{
+            font-family: var(--ff-primary);
+            font-size: var(--fs-big);
+            color: var(--color-sanjuan-blue);
+            line-height: 4.8rem;
+        }
+    }
+}
+
+// Typography: About - Info
+
+.info{
+    &__number{
+        color: var(--color-dark-pink);
+        font-family: var(--ff-primary);
+        font-size: var(--fs-big);
+        font-weight: var(--fw-reg);
+        line-height: 4.8rem;
+    }
+}
+
+// Typography: Contact - Partners
+
+.contact{
+    .heading{
+        &--4{
+            opacity: .75;
+        }
+    }
+
+    .form{
+        &__checkbox{
+            span{
+                color: var(--color-sanjuan-blue);
+            }
+        }
+    }
+}

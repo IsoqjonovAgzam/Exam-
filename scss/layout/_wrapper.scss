@@ -1,0 +1,13 @@
+.wrapper{
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    flex-direction: inherit;
+    grid-column: 1/-1;
+    grid-template-columns: inherit;
+    grid-template-rows: inherit;
+    grid-template-areas: inherit;
+    column-gap: inherit;
+    row-gap: inherit;
+    z-index: var(--z-normal);
+}

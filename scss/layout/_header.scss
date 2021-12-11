@@ -1,0 +1,118 @@
+// ********************
+// Header Styles
+// ********************
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .wrapper{
+        width: 100%;
+
+        // Mobile
+        padding: 2.667rem 1.6rem 1.6rem;
+
+        // Tablet
+        @include breakpoint-up(medium){
+            padding: 2.667rem 2.667rem 2.5rem;
+        }
+
+        // Desktop
+        @include breakpoint-up(large){
+            padding: 2.667rem 11rem 0;
+        }
+    }
+
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        @include breakpoint-down(small){
+            width: 100%;
+        }
+
+        &__logo{
+            max-width: 9rem;
+        }
+
+        &__list{
+            display: flex;
+            align-items: center;
+
+            @include breakpoint-down(small){
+                flex-direction: column;
+                background-color: var(--color-mirage-blue);
+                position: fixed;
+                right: -80%;
+                top: 0;
+                z-index: var(--z-fixed);
+                width: 80%;
+                height: 100%;
+                padding: 3.2rem 1.6rem;
+                transition: all .25s ease-out;
+            }
+
+            @include breakpoint-up(medium){
+                margin-left: 2.667rem;
+            }
+        }
+
+        .show{
+            right: 0;
+        }
+
+        &__toggle{
+            @include breakpoint-up(medium){
+                display: none;
+            }
+        }
+        
+        &__toggle--close{
+            @include breakpoint-down(small){
+                margin-left: auto;
+                margin-bottom: 3.2rem;
+            }
+        }
+        
+        &__item{
+            
+            @include breakpoint-down(small){
+                width: 100%;
+                margin-bottom: 2.133rem;
+                text-align: center;
+                
+                &:first-of-type{
+                    position: relative;
+                }
+
+                &:first-of-type::before{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: .0667rem;
+                    position: absolute;
+                    top: -1.6rem;
+                    background-color: var(--color-link-water-white);
+                    opacity: .15;
+                }
+            }
+
+            @include breakpoint-up(medium){
+                margin-right: 2.667rem;
+            }
+        }
+        .btn--mobile{
+            width: 100%;
+            @include breakpoint-up(medium){
+                display: none;
+            }
+        }
+    }
+    .btn--desktop{
+        @include breakpoint-down(small){
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+// ********************
+// Home Styles
+// ********************
+
+.hero{
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: var(--z-back);
+        background-image: url(../../assets/shared/desktop/bg-pattern-circle.svg);
+        background-repeat: no-repeat;
+        @include breakpoint-down(medium){
+            height: 60%;
+            left: 0;
+            right: 0;
+            top: -25%;
+            background-position: center 120%;
+            background-size: 150%;
+        }
+        @include breakpoint-up(large){
+            height: 780px;
+            width: 780px;
+            right: 0;
+            top: -50%;
+            background-size: contain;
+            background-position-x: 150px;
+        }
+    }
+}
+
+.partners{
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-mirage-blue);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint-up(large){
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url(../../assets/shared/desktop/bg-pattern-circle.svg);
+        background-repeat: no-repeat;
+        // z-index: var(--z-back);
+        @include breakpoint-down(medium){
+            height: 60%;
+            left: 0%;
+            right: 0;
+            top: -10%;
+            background-position: center 120%;
+            background-size: 200%;
+        }
+        @include breakpoint-up(large){
+            height: 140%;
+            width: 54%;
+            left: 0;
+            top: -50%;
+            background-size: contain;
+            background-position-x: -150px;
+        }
+    }
+
+    .wrapper{
+        width: 100%;
+        padding: 5rem 1.6rem;
+
+        @include breakpoint-up(medium){
+            padding: 5.867rem 7.733rem;
+        }
+
+        @include breakpoint-up(large){
+            padding: 6.667rem 11rem;
+        }
+    }
+
+    &__text-container{
+        max-width: 29.667rem;
+
+        .heading{
+            color: var(--color-link-water-white);
+            margin-bottom: 1rem;
+        }
+    
+        .paragraph{
+            margin-bottom: 2rem;
+        }
+    }
+
+
+    &__list{
+        @include breakpoint-down(small){
+            margin: 0 1.6rem;
+        }
+        @include breakpoint-up(large){
+            order: 2;
+            margin-left: 4.667rem;
+        }
+        @include breakpoint-up(xlarge){
+            margin-left: 8.667rem;
+        }
+    }
+}
+
+.features{
+    position: relative;
+
+    &::before{
+        @include breakpoint-up(xlarge){
+            content: '';
+            height: 50%;
+            width: 25%;
+            position: absolute;
+            right: 0;
+            top: 28%;
+            z-index: var(--z-back);
+            background-image: url(../../assets/shared/desktop/bg-pattern-circle.svg);
+            background-repeat: no-repeat;
+        }
+    }
+}
