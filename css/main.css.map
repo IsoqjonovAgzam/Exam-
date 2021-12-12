@@ -16,11 +16,7 @@
         "../sass/layout/_hero.scss",
         "../sass/layout/_features.scss",
         "../sass/layout/_partners.scss",
-        "../sass/layout/_wrapper.scss",
-        "../sass/pages/_home.scss",
-        "../sass/pages/_pricing.scss",
-        "../sass/pages/_about.scss",
-        "../sass/pages/_contact.scss"
+        "../sass/layout/_wrapper.scss"
     ],
     "names": [],
     "file": "main.css"

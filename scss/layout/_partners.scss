@@ -1,0 +1,18 @@
+.partners{
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item{
+        margin-bottom: 2.6rem;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include breakpoint-up(medium){
+            width: 30%;
+        }
+    }
+}
