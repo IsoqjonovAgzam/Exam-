@@ -1,0 +1,111 @@
+// ********************
+// Footer Styles
+// ********************
+
+.footer{
+    background-color: var(--color-mirage-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+    // Mobile
+    @include breakpoint-down(small){
+        flex-direction: column;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url(../../assets/shared/desktop/bg-pattern-circle.svg);
+        background-repeat: no-repeat;
+        // z-index: var(--z-back);
+        height: 100%;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        @include breakpoint-down(small){
+            background-position: center -35%;
+            background-size: 200%;
+        }
+        @include breakpoint-up(medium){
+            width: 50%;
+            background-position: left 10%;
+        }
+        @include breakpoint-up(medium){
+            width: 30%;
+            background-position: left 10%;
+        }
+    }
+
+    .wrapper{
+        width: 100%;
+
+        // Mobile
+        padding: 2.667rem 0;
+
+        // Tablet
+        @include breakpoint-up(medium){
+            padding: 2.667rem;
+        }
+
+        // Desktop
+        @include breakpoint-up(large){
+            padding: 2.667rem 11rem;
+        }
+
+    }
+
+    .nav{
+
+        @include breakpoint-up(medium){
+            display: flex;
+        }
+
+        &__logo{
+            display: block;
+        }
+
+        > *{
+            @include breakpoint-down(small){
+                margin-bottom: 2.667rem;
+            }
+        }
+
+        &__list{
+            @include breakpoint-up(medium){
+                display: flex;
+                align-items: center;
+                margin-left: 4.267rem;
+            }
+        }
+
+        &__item{
+            @include breakpoint-down(small){
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+            @include breakpoint-up(medium){
+                margin-right: 2.667rem;
+            }
+        }
+    }
+
+    .social__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > *:not(:last-child){
+            margin-right: 1.6rem;
+        }
+    }
+
+    .social__item{
+        svg{
+            &:hover path{
+                fill: var(--color-charm-pink);
+            }
+        }
+    }
+}
