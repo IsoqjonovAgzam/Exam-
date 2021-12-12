@@ -1,0 +1,106 @@
+// ********************
+// Features Styles
+// ********************
+
+.features{
+    text-align: center;
+
+    .wrapper{
+        padding: 5.33rem 1.6rem 2.667rem;
+
+        @include breakpoint-up(medium){
+            padding: 6.667rem 2.6rem 3.33rem;
+        }
+
+        @include breakpoint-up(large){
+            padding: 10rem 11rem 3.33rem;
+        }
+    }
+
+    .feature{
+        @include breakpoint-down(medium){
+            margin-bottom: 6.667rem;
+        }
+
+        @include breakpoint-up(large){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &:last-of-type{
+            margin-bottom: 5.33rem;
+
+            @include breakpoint-up(medium){
+                margin-bottom: 6.667rem;
+            }
+
+            @include breakpoint-up(large){
+                margin-bottom: 9.733rem;
+            }
+        }
+
+        &:nth-of-type(even){
+            .feature__image-container{
+                order: 2;
+
+                img{
+                    margin-left: auto;
+                }
+            }
+            .feature__text-container{
+                order: 1;
+            }
+        }
+
+        &__text-container{
+            max-width: 29.667rem;
+            margin: 0 auto;
+
+            @include breakpoint-up(large){
+                text-align: left;
+                width: 50%;
+            }
+            .heading{
+                margin-bottom: 1.6rem;
+            }
+        }
+
+        &__image-container{
+            @include breakpoint-down(medium){
+                max-width: 27.667rem;
+                margin: 0 auto;
+            }
+            @include breakpoint-up(large){
+                width: 50%;
+            }
+        }
+    }
+
+    &__list{
+        @include breakpoint-up(medium){
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__item{
+        margin-bottom: 3.2rem;
+        @include breakpoint-up(medium){
+            width: 30%;
+        }
+    }
+
+    &__icon{
+        img{
+            margin: 0 auto;
+            margin-bottom: 2.133rem;
+        }
+    }
+
+    &__text{
+        .heading{
+            margin-bottom: 1.067rem;
+        }
+    }
+}
